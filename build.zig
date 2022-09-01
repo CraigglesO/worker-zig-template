@@ -6,17 +6,17 @@ pub fn build(b: *Builder) void {
     // what target to build for. Here we do not override the defaults, which
     // means any target is allowed, and the default is native. Other options
     // for restricting supported target set are available.
-    const target = b.standardTargetOptions(.{});
+    // const target = b.standardTargetOptions(.{});
 
     // Standard release options allow the person running `zig build` to select
     // between Debug, ReleaseSafe, ReleaseFast, and ReleaseSmall.
     b.is_release = true;
-    const mode = b.standardReleaseOptions();
+    // const mode = b.standardReleaseOptions();
     b.cache_root = "cache";
     b.global_cache_root = "cache";
     b.use_stage1 = true;
 
-    const wasm_build = b.addSharedLibrary("build", "lib/main.zig", .unversioned);
+    const wasm_build = b.addSharedLibrary("zig", "lib/main.zig", .unversioned);
     wasm_build.setOutputDir("dist");
     wasm_build.setTarget(std.zig.CrossTarget {
         .cpu_arch = .wasm32,

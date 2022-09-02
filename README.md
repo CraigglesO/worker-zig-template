@@ -2,7 +2,12 @@
 
 ## Install
 
-```shell
+```bash
+# in one go
+git clone --recurse-submodules -j8 git@github.com:CraigglesO/worker-zig-template.git
+
+# OR
+
 # clone
 git clone git@github.com:CraigglesO/worker-zig-template.git
 # enter

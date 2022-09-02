@@ -22,7 +22,8 @@ d1_databases = [
 [build]
 command = "npm run build:zig && npm run build:esm"
 watch_dir = [
-  "src"
+  "src",
+  "lib"
 ]
 
 [[build.upload.rules]]

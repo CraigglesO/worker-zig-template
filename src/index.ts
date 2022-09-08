@@ -13,6 +13,7 @@ router.post('/basic', zigFetch<Env>('basic'))
 // ** ZIG HEAP **
 // for testing purposes
 // return the heap to ensure it's cleaned up
+/** @internal */
 export function zigHeap (): Array<any> {
   const worker = getZigWorker()
   return [...worker.heap]
